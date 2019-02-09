@@ -44,3 +44,12 @@ coolList = [(c, t) for c in colours for t in things]
 print(coolList)
 
 # result: [('red', 'house'), ('red', 'car'), ('red', 'tree'), ('green', 'house'), ('green', 'car'), ('green', 'tree'), ('yellow', 'house'), ('yellow', 'car'), ('yellow', 'tree'), ('blue', 'house'), ('blue', 'car'), ('blue', 'tree')]
+
+
+# Example 5
+x = 1
+y = 1
+z = 1
+theList = [ [i, j, k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i + j + k != n ]
+# result:
+# [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
