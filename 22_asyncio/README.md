@@ -15,7 +15,27 @@ Parallelism implies concurrency
 - CPU-bound tasks: tasks that is characterized by the computer's cores continually working hard
 - IO-bound tasks: tasks that is characterized by a lot of waiting on i/o operation to complete.
 
-### async IO
+# async IO
 - async IO is a style of concurrent programming (not paralellism, see above notes)
 - it is not threading, not multiprocessing
 - it gives a feeling of concurrency despite using a single thread in a single process
+
+## The rules of async IO
+To create coroutine:
+```python
+async def function_name():
+    pass
+```
+
+`await` must be used to call coroutine.
+
+Summary of the rules:
+```python
+async def f(x):
+    y = await z(x) # OK
+    return y
+
+def m(x):
+    y = await z(x) # NO
+    return y
+```
